@@ -94,7 +94,7 @@
         
     </div>
 
-        <script>
+    <script>
         //delete
         $('.delete').click(function (e) 
         {
@@ -136,7 +136,7 @@
                 reader.readAsDataURL(this.files[0]);
             }
         });
-</script>
+    </script>
 </body>
 {{-- <div class="page-footer">
 <p class="no-s">2019 © Abdelrhman.</p>

@@ -11,10 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('/');
+
+// Route::get('/cart', 'CartController@index')->name('cart');
+// Route::post('/cart', 'CartController@store')->name('cart.store');
+Route::post('/cart', 'CartController@getAddToCart')->name('carts.getAddToCart');
+Route::get('/cart', 'CartController@getCart')->name('carts.shoppingCart');
+Route::post('/saveCart', 'CartController@postCheckout')->name('carts.postCheckout');
+

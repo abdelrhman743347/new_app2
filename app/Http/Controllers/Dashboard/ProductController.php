@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use Session;
 use App\product;
 use App\Category;
+use App\Cart;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -137,5 +139,26 @@ class ProductController extends Controller
         return redirect()->route('dashboard.products.index');
 
     }
+/*----------------------------------------------------------------------------------------------*/
+
+    // public function getIndex()
+    // {
+    //     $products = Product::all();
+    //     return view('shop.index', compact('products'));
+    // }    
+
+    // public function getAddToCart(Request $request)
+    // { 
+
+    //     // dd($request->all());
+    //     $product = Product::find($request->product_id);
+    //     $oldCart = Session::has('cart') ? Session::get('cart') : null;
+    //     $cart = new Cart($oldCart);
+    //     $cart->add($product, $product->id);
+    //     $request->session()->put('cart', $cart);
+    //     // dd($request->session()->get('cart'));
+    //     return back();
+    // }
+
 
 }

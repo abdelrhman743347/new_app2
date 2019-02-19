@@ -11,6 +11,9 @@ Route::prefix('dashboard')->name('dashboard.')->middleware(['auth'])->group(func
 	Route::resource('/categories', 'CategoryController')->except(['show']);
 
 	Route::resource('/products', 'ProductController')->except(['show']);
+	Route::get('/orders', 'UserOrderController@index')->name('orders');
+	// Route::post('/products', 'ProductController@getAddToCart')->name('products.getAddToCart');
+	// Route::post('/products', 'ProductController@getAddToCart')->name('products.getAddToCart');
 
 
 
