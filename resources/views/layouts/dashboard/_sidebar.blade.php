@@ -38,7 +38,7 @@
 
                         @if (auth()->user()->hasRole('super_admin'))
                             <li class="">
-                                <a href="{{ route('dashboard.orders') }}" class="waves-effect waves-button">
+                                <a href="{{ route('dashboard.orders.all') }}" class="waves-effect waves-button">
                                     <span class="menu-icon glyphicon glyphicon-list"></span>
                                     <p>Orders</p>
                                 </a>
